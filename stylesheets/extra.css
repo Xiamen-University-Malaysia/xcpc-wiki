@@ -1,0 +1,9 @@
+.md-source-file .md-avatar {
+  filter: none !important;
+  border: 1px solid rgba(128, 128, 128, 0.3) !important;
+}
+
+img[src*="avatars.githubusercontent.com"] {
+  filter: none !important;
+  border: 1px solid rgba(128, 128, 128, 0.3) !important;
+}
