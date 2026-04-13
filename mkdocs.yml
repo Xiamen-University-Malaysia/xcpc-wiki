@@ -1,6 +1,6 @@
-site_name: XCPC Wiki
+site_name: XMUM XCPC Wiki
 site_description: 厦门大学马来西亚分校 XCPC 知识库
-site_author: Xiamen-University-Malaysia
+site_author: Algorithm Contest Interest Group
 repo_url: https://github.com/Xiamen-University-Malaysia/xcpc-wiki
 repo_name: Xiamen-University-Malaysia/xcpc-wiki
 
@@ -31,6 +31,12 @@ theme:
         icon: material/brightness-4
         name: 切换到亮色模式
 
+plugins:
+  - search
+  - git-committers:
+      repository: Xiamen-University-Malaysia/xcpc-wiki
+      branch: main
+
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -49,7 +55,7 @@ markdown_extensions:
 
 nav:
   - 简介: 
-    - 关于本项目: index.md
+    - 首页: index.md
     - 如何贡献: contributing.md
     - 感谢: thanks.md
   - 题解: 
@@ -62,7 +68,12 @@ nav:
     - 模板简介: template/index.md
   - 出题想法: 
     - 出题想法简介: idea/index.md
+  - 资源: 
+    - 资源简介: resource/index.md
   - 碎碎念: 
     - 碎碎念简介: memo/index.md
   - 杂项: 
     - 杂项简介: misc/index.md
+
+extra_css:
+  - stylesheets/extra.css
