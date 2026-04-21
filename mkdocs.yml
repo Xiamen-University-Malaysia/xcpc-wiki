@@ -36,6 +36,9 @@ plugins:
   - git-committers:
       repository: Xiamen-University-Malaysia/xcpc-wiki
       branch: main
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
 
 markdown_extensions:
   - pymdownx.arithmatex:
