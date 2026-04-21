@@ -15,16 +15,14 @@ theme:
     - content.code.copy
   palette:
     # 浅色模式
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
         name: 切换到暗色模式
     # 深色模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
@@ -80,6 +78,11 @@ nav:
     - 追忆: memo/2026-04-20-追忆-Jayun.md
   - 杂项: 
     - 杂项简介: misc/index.md
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
   - stylesheets/extra.css
