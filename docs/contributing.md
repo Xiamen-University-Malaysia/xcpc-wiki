@@ -129,3 +129,118 @@ git push origin main
 - MkDocs: 与 MkDocs 配置相关的更改
 
     MkDocs update navigation structure
+
+## 格式指南
+
+### 使用简单块（Admonition）
+
+!!! note "标题"
+    块内容
+
+``` markdown
+!!! note "标题"
+    块内容
+```
+
+### 使用可折叠块（Details）
+
+??? question "点击展开"
+    折叠的内容
+
+``` markdown
+??? question "点击展开"
+    折叠的内容
+```
+
+支持的块类型：`note`，`abstract`，`info`，`tip`，`warning`，`failure`，`success`，`question`，`danger`，`bug`，`example`，`quote`。
+
+### 代码行高亮
+
+如果需要突出代码中的重要行，可以使用 `hl_lines` 参数指定要高亮的行号：
+
+高亮单行：
+
+```markdown
+```cpp hl_lines="2"
+```
+
+```cpp hl_lines="2"
+#include <bits/stdc++.h>
+using namespace std;  // 这一行会被高亮
+
+int main() {
+    return 0;
+}
+```
+
+高亮多行：
+
+```markdown
+```cpp hl_lines="5 6 7"
+```
+
+```cpp hl_lines="5 6 7"
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {          // 这三行会被高亮
+    int n = 10;
+    cout << n << endl;
+    return 0;
+}
+```
+
+高亮行范围：
+
+```markdown
+```cpp hl_lines="5-7"
+```
+
+```cpp hl_lines="5-7"
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {          // 这一段会被高亮
+    int n = 10;
+    cout << n << endl;
+    return 0;
+}
+```
+
+### 显示行号
+
+使用 `linenums="1"` 参数可以在代码块前显示行号，便于引用和说明：
+
+带行号的代码：
+
+```markdown
+```cpp linenums="1"
+```
+
+```cpp linenums="1"
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n = 10;
+    cout << n << endl;
+    return 0;
+}
+```
+
+结合行高亮：
+
+```markdown
+```cpp linenums="1" hl_lines="4 8"
+```
+
+```cpp linenums="1" hl_lines="4 8"
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {          // 这两行会被高亮
+    int n = 10;
+    cout << n << endl;
+    return 0;
+}
+```
