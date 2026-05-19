@@ -1,0 +1,175 @@
+#include<bits/stdc++.h>
+#define Maxn 10000
+#define Maxm 40000
+using namespace std;
+int head1[Maxn+5],to1[Maxm+5],nex1[Maxm+5],tot1;
+int w1[Maxm+5];
+int head2[2*Maxn+5],to2[2*Maxm+5],nex2[2*Maxm+5],tot2;
+int w2[2][Maxm+5];
+int d[Maxn+5];
+stack<int> st;
+vector<int> v;
+int dfn[Maxn+5],low[Maxn+5],t,cnt;
+int root;
+bool vis[Maxn+5];
+int siz[2*Maxn+5],son[2*Maxn+5],dep[2*Maxn+5],fa[2*Maxn+5];
+int top[2*Maxn+5];
+int dis[3][2*Maxn+5];
+int s[2*Maxn+5];
+void init1()
+{
+    memset(head1,-1,sizeof(head1));
+    tot1=1;
+}
+void add1(int x,int y,int z)
+{
+    to1[++tot1]=y;
+    w1[tot1]=z;
+    nex1[tot1]=head1[x];
+    head1[x]=tot1;
+}
+void init2()
+{
+    memset(head2,-1,sizeof(head2));
+    tot2=0;
+}
+void add2(int x,int y,int z1,int z2)
+{
+    to2[++tot2]=y;
+    w2[0][tot2]=z1;
+    w2[1][tot2]=z2;
+    nex2[tot2]=head2[x];
+    head2[x]=tot2;
+}
+void tarjan(int x,int pre)
+{
+    dfn[x]=low[x]=++t;
+    st.push(x);
+    for(int i=head1[x];i!=-1;i=nex1[i])
+    {
+        if(!dfn[to1[i]])
+        {
+            d[x]=w1[i];
+            tarjan(to1[i],i);
+            low[x]=min(low[x],low[to1[i]]);
+            if(low[to1[i]]>=dfn[x])
+            {
+                int y;
+                cnt++;
+                v.clear();
+                do
+                {
+                    y=st.top();
+                    v.push_back(y);
+                    st.pop();
+                }while(y!=to1[i]);
+                if(v.size()==1)
+                {
+                    add2(cnt,x,w1[i],w1[i]);
+                    add2(x,cnt,w1[i],w1[i]);
+                    add2(cnt,to1[i],0,0);
+                    add2(to1[i],cnt,0,0);
+                    continue;
+                }
+                int sum=d[x];
+                for(int i=0;i<v.size();i++) sum+=d[v[i]];
+                s[cnt]=sum;
+                int tmp=0;
+                for(int i=0;i<v.size();i++)
+                {
+                    tmp+=d[v[i]];
+                    add2(cnt,v[i],sum-tmp,tmp);
+                    add2(v[i],cnt,sum-tmp,tmp);
+                }
+                add2(cnt,x,0,0);
+                add2(x,cnt,0,0);
+            }
+        }
+        else
+        {
+            if((i^1)!=pre) d[x]=w1[i];
+            low[x]=min(low[x],dfn[to1[i]]);
+        }
+    }
+}
+void dfs1(int x,int f,int dist1,int dist2,int dist)
+{
+    siz[x]=1;
+    fa[x]=f;
+    dep[x]=dep[f]+1;
+    dis[0][x]=dist1;
+    dis[1][x]=dist2;
+    dis[2][x]=dist;
+    for(int i=head2[x];i!=-1;i=nex2[i])
+    {
+        if(to2[i]==f) continue;
+        dfs1(to2[i],x,dist1+w2[0][i],dist2+w2[1][i],dist+min(w2[0][i],w2[1][i]));
+        siz[x]+=siz[to2[i]];
+        if(siz[son[x]]<siz[to2[i]]) son[x]=to2[i];
+    }
+}
+void dfs2(int x,int f)
+{
+    top[x]=f;
+    if(son[x]) dfs2(son[x],f);
+    for(int i=head2[x];i!=-1;i=nex2[i])
+    {
+        if(to2[i]!=son[x]&&to2[i]!=fa[x]) dfs2(to2[i],to2[i]);
+    }
+}
+int lca(int x,int y)
+{
+    while(top[x]!=top[y])
+    {
+        if(dep[top[x]]<dep[top[y]]) swap(x,y);
+        x=fa[top[x]];
+    }
+    return dep[x]<dep[y]?x:y;
+}
+int findson(int p,int x)
+{
+    while(dep[p]<dep[x])
+    {
+        x=top[x];
+        if(fa[x]==p) return x;
+        x=fa[x];
+    }
+    return son[p];
+}
+int main()
+{
+    init1();
+    init2();
+    int n,m,q;
+    scanf("%d%d%d",&n,&m,&q);
+    for(int i=1;i<=m;i++)
+    {
+        int x,y,z;
+        scanf("%d%d%d",&x,&y,&z);
+        add1(x,y,z);
+        add1(y,x,z);
+    }
+    cnt=n;
+    tarjan(1,0);
+    dfs1(1,0,0,0,0);
+    dfs2(1,0);
+    for(int i=1;i<=q;i++)
+    {
+        int x,y;
+        scanf("%d%d",&x,&y);
+        int p=lca(x,y);
+        if(p>n)
+        {
+            int c1=findson(p,x),c2=findson(p,y);
+            int del=abs(dis[0][c1]-dis[0][c2]);
+            int ans=dis[2][x]+dis[2][y]-dis[2][c1]-dis[2][c2]+min(del,s[p]-del);
+            printf("%d\n",ans);
+        }
+        else
+        {
+            int ans=dis[2][x]+dis[2][y]-2*dis[2][p];
+            printf("%d\n",ans);
+        }
+    }
+    return 0;
+}
