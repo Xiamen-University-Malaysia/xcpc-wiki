@@ -23,7 +23,7 @@
     
     
       
-        <title>2026 05 19 ICPC2025西安区域赛 Follow the Penguins Ryan1702 - XMUM XCPC Wiki</title>
+        <title>企鹅 - XMUM XCPC Wiki</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2026 05 19 ICPC2025西安区域赛 Follow the Penguins Ryan1702
+              企鹅
             
           </span>
         </div>
@@ -1422,6 +1422,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1430,7 +1432,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         题目描述
@@ -1441,7 +1443,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         输入格式
@@ -1452,7 +1454,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         输出格式
@@ -1541,52 +1543,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         说明/提示
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        题解
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="题解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        建立模型
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        代码实现
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1610,16 +1573,18 @@
   
 
 
-<h2 id="_1">题目描述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="_1">企鹅<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><a href="https://www.luogu.com.cn/problem/P14452">https://www.luogu.com.cn/problem/P14452</a></p>
+<h2 id="_2">题目描述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>有 <span class="arithmatex">\(n\)</span> 只企鹅站在数轴上。第 <span class="arithmatex">\(i\)</span> 只企鹅最初位于坐标 <span class="arithmatex">\(a_i\)</span> 处。保证所有的 <span class="arithmatex">\(a_i\)</span> 互不相同。</p>
 <p>每只企鹅都会选择一个目标企鹅，记为 <span class="arithmatex">\(t_i\)</span>（<span class="arithmatex">\(1 \leq t_i \leq n\)</span>，且 <span class="arithmatex">\(t_i \neq i\)</span>）。在时间 <span class="arithmatex">\(0\)</span> 时，所有企鹅同时开始移动。每只企鹅以每秒 <span class="arithmatex">\(0.5\)</span> 个单位长度的速度，朝着其目标企鹅当前所在的位置移动。</p>
 <p>当第 <span class="arithmatex">\(i\)</span> 只企鹅与它的目标企鹅 <span class="arithmatex">\(t_i\)</span> 相遇时（即二者在同一时刻到达同一坐标），它会立即停止移动。对于每只企鹅，请你求出它停止移动的时间。</p>
 <p>可以证明，每只企鹅都会在有限的时间内停止，且停止时间总是一个整数。</p>
-<h2 id="_2">输入格式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">输入格式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>输入的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(2 \leq n \leq 5 \cdot 10^5\)</span>），表示企鹅的数量。</p>
 <p>第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(t_1, t_2, \ldots, t_n\)</span>（<span class="arithmatex">\(1 \leq t_i \leq n\)</span>，且 <span class="arithmatex">\(t_i \neq i\)</span>），其中 <span class="arithmatex">\(t_i\)</span> 表示第 <span class="arithmatex">\(i\)</span> 只企鹅选择的目标企鹅编号。</p>
 <p>第三行包含 <span class="arithmatex">\(n\)</span> 个互不相同的整数 <span class="arithmatex">\(a_1, a_2, \ldots, a_n\)</span>（<span class="arithmatex">\(-5 \cdot 10^8 \leq a_i \leq 5 \cdot 10^8\)</span>），其中 <span class="arithmatex">\(a_i\)</span> 表示第 <span class="arithmatex">\(i\)</span> 只企鹅的初始坐标。</p>
-<h2 id="_3">输出格式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">输出格式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>输出一行，包含 <span class="arithmatex">\(n\)</span> 个整数，其中第 <span class="arithmatex">\(i\)</span> 个整数表示第 <span class="arithmatex">\(i\)</span> 只企鹅停止移动的时间（单位为秒）。</p>
 <h2 id="1">输入输出样例 #1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="1_1">输入 #1<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
@@ -1639,14 +1604,14 @@
 <h3 id="2_2">输出 #2<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>25 21 17 14 14 49 29 9 61 17
 </span></code></pre></div>
-<h2 id="_4">说明/提示<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">说明/提示<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>在第一个样例中：</p>
 <p>最初，第 2 只企鹅位于第 1 只企鹅的右侧，因此第 1 只企鹅向右移动。同样地，第 2 只企鹅也向右移动，而第 3 只企鹅向左移动。</p>
 <p>在第 <span class="arithmatex">\(1\)</span> 秒时，第 2 只企鹅与第 3 只企鹅在 <span class="arithmatex">\(x = 2.5\)</span> 处相遇，此时第 2 只企鹅停止移动。</p>
 <p>此时，第 1 只企鹅的位置是 <span class="arithmatex">\(x = -0.5\)</span>，第 2 只企鹅的位置是 <span class="arithmatex">\(x = 2.5\)</span>，二者之间的距离为 <span class="arithmatex">\(3\)</span>。由于第 1 只企鹅以每秒 <span class="arithmatex">\(0.5\)</span> 个单位的速度移动，它还需要 <span class="arithmatex">\(6\)</span> 秒才能到达第 2 只企鹅。因此，第 1 只企鹅在第 <span class="arithmatex">\(7\)</span> 秒时停止。</p>
 <p>在第 1 只企鹅停止之前，第 3 只企鹅会在第 <span class="arithmatex">\(4\)</span> 秒与它相遇。因此，答案分别为 <span class="arithmatex">\(7\)</span>、<span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(4\)</span>。</p>
-<h1 id="_5">题解<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
-<h2 id="_6">建立模型<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h1 id="_6">题解<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<h2 id="_7">建立模型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><span class="arithmatex">\(n\)</span>个点<span class="arithmatex">\(n\)</span>条边，每个点只有一条出边，表示起点的目标是终点。</p>
 <p>我们不难发现当一个点的答案只由自己目标节点决定</p>
 <p>所以可以考虑<span class="arithmatex">\(DP\)</span></p>
@@ -1693,7 +1658,7 @@ dist=u和v之间的距离=abs(a_u-a_v)\\
 Situation~1:ans_u=2\times dist+ans_v\\
 Situation~2:ans_u=max(dist,2\times dist-ans_v)
 \]</div>
-<h2 id="_7">代码实现<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_8">代码实现<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <div class="language-c++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#define Maxn 500000</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#define INF 0x3f3f3f3f3f3f3f3f</span>
@@ -1819,7 +1784,7 @@ Situation~2:ans_u=max(dist,2\times dist-ans_v)
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月19日 06:47:14 UTC"><span class="timeago" datetime="2026-05-19T06:47:14+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月19日 06:47:14 UTC">2026-05-19</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月19日 06:57:34 UTC"><span class="timeago" datetime="2026-05-19T06:57:34+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月19日 06:57:34 UTC">2026-05-19</span>
   </span>
 
     
