@@ -1,3 +1,7 @@
+# 企鹅
+
+[https://www.luogu.com.cn/problem/P14452](https://www.luogu.com.cn/problem/P14452)
+
 ## 题目描述
 
 有 $n$ 只企鹅站在数轴上。第 $i$ 只企鹅最初位于坐标 $a_i$ 处。保证所有的 $a_i$ 互不相同。
