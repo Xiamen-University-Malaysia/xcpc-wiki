@@ -96,6 +96,8 @@ git push origin main
 
     主要记录一些不属于以上分类的内容。
 
+笔记 `note/` 和模板 `template/` 分类支持 `.cpp` 文件自动预览：将 `.cpp` 文件放入 `docs/note/作者/` 或 `docs/template/作者/` 目录下，构建时会自动生成带语法高亮的预览页面，无需手动编写 `.md` 文件。注意：新增目录需作者在 `mkdocs.yml` 的 `nav` 中添加对应导航地址。
+
 ## 提交 commit 规范
 
 提交 commit 前确保代码或文档已经过测试和验证，能够正常运行。
