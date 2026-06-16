@@ -80,7 +80,124 @@ nav:
     - ICPC 2026 深圳邀请（田鸡赛码）: contest/2026-04-19-ICPC2026深圳邀请-田鸡赛码.md
   - 笔记: 
     - 笔记简介: note/index.md
-    - Ryan1702: note/Ryan1702/index.md
+    - Ryan1702:
+      - 简介: note/Ryan1702/index.md
+      - 高精度:
+        - 高精度加法: note/Ryan1702/高精度/加法.md
+        - 高精度减法: note/Ryan1702/高精度/减法.md
+        - 高精度乘法: note/Ryan1702/高精度/乘法.md
+        - 高精度除法（高精度除以低精度）: note/Ryan1702/高精度/除法1.md
+        - 高精度除法（高精度除以高精度）: note/Ryan1702/高精度/除法2.md
+      - 排序算法:
+        - 冒泡排序: note/Ryan1702/排序/冒泡排序.md
+        - 选择排序: note/Ryan1702/排序/选择排序.md
+        - 插入排序: note/Ryan1702/排序/插入排序.md
+        - 归并排序: note/Ryan1702/排序/归并排序.md
+        - 快速排序: note/Ryan1702/排序/快速排序.md
+        - 基数排序: note/Ryan1702/排序/基数排序.md
+        - 堆排序: note/Ryan1702/排序/堆排序.md
+      - 二分:
+        - 二分答案: note/Ryan1702/二分/二分答案.md
+      - 搜索:
+        - 记忆化搜索: note/Ryan1702/搜索/记忆化搜索.md
+      - DP:
+        - 背包问题:
+          - 01背包: note/Ryan1702/DP/背包/01背包.md
+          - 01背包k优解: note/Ryan1702/DP/背包/01背包k优解.md
+          - 01背包方案以及方案数: note/Ryan1702/DP/背包/01背包方案以及方案数.md
+          - 01背包最优方案数: note/Ryan1702/DP/背包/01背包最优方案数.md
+          - 完全背包: note/Ryan1702/DP/背包/完全背包.md
+          - 多重背包: note/Ryan1702/DP/背包/多重背包.md
+          - 多重背包单调队列优化: note/Ryan1702/DP/背包/多重背包单调队列优化.md
+        - 其他:
+          - 区间DP: note/Ryan1702/DP/区间DP.md
+          - 最长不下降子序列: note/Ryan1702/DP/最长不下降子序列.md
+      - 字符串:
+        - 字符串哈希: note/Ryan1702/字符串/字符串哈希.md
+        - KMP: note/Ryan1702/字符串/KMP.md
+        - 扩展KMP: note/Ryan1702/字符串/扩展KMP.md
+        - 马拉车算法: note/Ryan1702/字符串/马拉车算法.md
+        - Trie: note/Ryan1702/字符串/Trie.md
+        - Trie最大异或对: note/Ryan1702/字符串/Trie最大异或对.md
+        - AC自动机: note/Ryan1702/字符串/AC自动机.md
+      - 数据结构:
+        - ST表: note/Ryan1702/数据结构/ST表.md
+        - 单调栈: note/Ryan1702/数据结构/单调栈.md
+        - 单调队列: note/Ryan1702/数据结构/单调队列.md
+        - 线段树: note/Ryan1702/数据结构/线段树.md
+        - 树状数组点修区查: note/Ryan1702/数据结构/树状数组点修区查.md
+        - 树状数组区修点查: note/Ryan1702/数据结构/树状数组区修点查.md
+        - 树状数组区修区查: note/Ryan1702/数据结构/树状数组区修区查.md
+        - 平衡树: note/Ryan1702/数据结构/平衡树.md
+      - 数学:
+        - 快速幂: note/Ryan1702/数学/快速幂.md
+        - 矩阵快速幂: note/Ryan1702/数学/矩阵快速幂.md
+        - 高斯消元: note/Ryan1702/数学/高斯消元.md
+        - 线性筛: note/Ryan1702/数学/线性筛.md
+        - 欧几里得算法求GCD: note/Ryan1702/数学/欧几里得算法求GCD.md
+        - 扩展欧几里得: note/Ryan1702/数学/扩展欧几里得.md
+        - 欧拉函数: note/Ryan1702/数学/欧拉函数.md
+        - 欧拉定理: note/Ryan1702/数学/欧拉定理.md
+        - 乘法逆元: note/Ryan1702/数学/乘法逆元.md
+        - 中国剩余定理: note/Ryan1702/数学/中国剩余定理.md
+        - 整除分块: note/Ryan1702/数学/整除分块.md
+        - 组合数: note/Ryan1702/数学/组合数.md
+        - 错位排列: note/Ryan1702/数学/错位排列.md
+        - 康托展开: note/Ryan1702/数学/康托展开.md
+        - 斯特林数: note/Ryan1702/数学/斯特林数.md
+        - 卡特兰数: note/Ryan1702/数学/卡特兰数.md
+        - 放球问题: note/Ryan1702/数学/放球问题.md
+        - 卢卡斯定理: note/Ryan1702/数学/卢卡斯定理.md
+      - 图论:
+        - 树上问题:
+          - 树的直径: note/Ryan1702/图论/树的直径.md
+          - 树的中心: note/Ryan1702/图论/树的中心.md
+          - 树的重心:
+            - DFS: note/Ryan1702/图论/树的重心DFS.md
+            - 换根DP: note/Ryan1702/图论/树的重心换根DP.md
+          - 最小生成树:
+            - Kruskal: note/Ryan1702/图论/Kruskal.md
+            - Prim: note/Ryan1702/图论/Prim.md
+          - 树上启发式合并: note/Ryan1702/图论/树上启发式合并.md
+          - 树上启发式合并2: note/Ryan1702/图论/树上启发式合并2.md
+          - 最近公共祖先:
+            - LCA倍增算法: note/Ryan1702/图论/LCA倍增算法.md
+            - LCA树链剖分: note/Ryan1702/图论/LCA树链剖分.md
+            - LCA的RMQ算法: note/Ryan1702/图论/LCA的RMQ算法.md
+            - LCA的Tarjan算法: note/Ryan1702/图论/LCA的Tarjan算法.md
+          - 树链剖分:
+            - 重链剖分: note/Ryan1702/图论/重链剖分.md
+            - 长链剖分: note/Ryan1702/图论/长链剖分.md
+        - 图上问题:
+          - 图的存储: note/Ryan1702/图论/图的存储.md
+          - 最短路算法:
+            - Floyd: note/Ryan1702/图论/Floyd.md
+            - Dijkstra: note/Ryan1702/图论/Dijkstra.md
+            - Bellman-ford: note/Ryan1702/图论/Bellman-ford.md
+            - SPFA: note/Ryan1702/图论/SPFA.md
+            - Johnson: note/Ryan1702/图论/Johnson.md
+          - 2-SAT: note/Ryan1702/图论/2-SAT.md
+          - 二分图:
+            - 二分图判定: note/Ryan1702/图论/二分图判定.md
+            - 二分图最大匹配: note/Ryan1702/图论/二分图最大匹配.md
+            - 二分图最大匹配网络流解法: note/Ryan1702/图论/二分图最大匹配网络流解法.md
+            - 二分图最大权完美匹配DFS: note/Ryan1702/图论/二分图最大权完美匹配DFS.md
+            - 二分图最大权完美匹配BFS: note/Ryan1702/图论/二分图最大权完美匹配BFS.md
+          - Tarjan算法:
+            - 强连通分量: note/Ryan1702/图论/强连通分量.md
+            - 割点: note/Ryan1702/图论/割点.md
+            - 割边: note/Ryan1702/图论/割边.md
+            - 点双连通分量: note/Ryan1702/图论/点双连通分量.md
+            - 边双连通分量: note/Ryan1702/图论/边双连通分量.md
+          - 圆方树: note/Ryan1702/图论/圆方树.md
+          - 基环树: note/Ryan1702/图论/基环树.md
+          - 拓扑排序: note/Ryan1702/图论/拓扑排序.md
+          - 网络流:
+            - 最大流Dinic算法: note/Ryan1702/图论/最大流Dinic算法.md
+            - 最大流EK算法: note/Ryan1702/图论/最大流EK算法.md
+            - 最小割Dinic算法: note/Ryan1702/图论/最小割Dinic算法.md
+            - 费用流EK算法: note/Ryan1702/图论/费用流EK算法.md
+          - 欧拉回路: note/Ryan1702/图论/欧拉回路.md
   - 模板: 
     - 模板简介: template/index.md
   - 出题想法: 
