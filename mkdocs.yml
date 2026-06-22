@@ -75,6 +75,7 @@ nav:
     - ICPC 2025 NERC J: solution/2026-05-19-ICPC2025NERC-JinxorJackpot-Ryan1702.md
     - CCPC 2026 福建邀请赛 F: solution/2026-06-11-CCPC2026福建邀请赛-青青草原扛把子-Ryan1702.md
     - CCPC 2026 福建邀请赛 I: solution/2026-06-17-CCPC2026福建邀请赛-限号出行-Ryan1702.md
+    - CCPC 2026 贵州邀请赛 B: solution/2026-06-22-CCPC2026贵州邀请赛-娄山关扫雷-zeyu10.md
   - 比赛记录: 
     - 比赛记录简介: contest/index.md
     - ICPC 2026 深圳邀请（田鸡赛码）: contest/2026-04-19-ICPC2026深圳邀请-田鸡赛码.md
@@ -212,7 +213,6 @@ nav:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
